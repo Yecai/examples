@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_131"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.4.8.jar" sourcepath="lib/httpcomponents-core-4.4.8-src.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
