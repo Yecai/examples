@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @Description: ThreadLocal
  * 
  */
-public class _8_Profiler {
+public class _8_ThreadLocal {
 	//第一次get()方法调用时会进行初始化（如果set方法没有调用），每个线程会调用一次
 	private static final ThreadLocal<Long> TIME_THREADLOCAL = new ThreadLocal<Long>() {
 		protected Long initialValue() {
@@ -30,9 +30,9 @@ public class _8_Profiler {
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
-		System.out.println("init: " + _8_Profiler.get() + "  mills");
-		_8_Profiler.begin();
+		System.out.println("init: " + _8_ThreadLocal.get() + "  mills");
+		_8_ThreadLocal.begin();
 		TimeUnit.SECONDS.sleep(1);
-		System.out.println("Cost: " + _8_Profiler.end() + "  mills");
+		System.out.println("Cost: " + _8_ThreadLocal.end() + "  mills");
 	}
 }

@@ -4,6 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 import com.xiaopan.thread.artbook._4_base._4_1_Introduction._2_SleepUtils;
 
+/**
+ * @Package: com.xiaopan.thread.artbook._4_base._4_2_start_and_shutdown
+ * @ClassName: _3_Interrupted
+ * 中断只是给线程发送了个消息，线程需要自己检查中断状态isInterrupted()进行响应，或在sleep等方法抛出的中断异常的catch语句块中进行响应
+ * 如果不书写响应代码，线程将忽略中断
+ * try catch InterruptedException 会清除中断状态
+ * 一直busy忙碌的线程没有清除中断状态
+ */
 public class _3_Interrupted {
 	public static void main(String[] args) throws InterruptedException {
 		//sleepThread不停的尝试睡眠
