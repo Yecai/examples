@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import com.xiaopan.thread.artbook._4_base._4_1_Introduction._2_SleepUtils;
+import com.xiaopan.thread.artbook._4_base._4_1_Introduction.SleepUtils;
 
 /**
  * @Package: com.xiaopan.thread.artbook._4_base
@@ -66,7 +66,7 @@ public class _5_wait_notify {
 				System.out.println(Thread.currentThread() + " hold lock. notify @ " + new SimpleDateFormat("HH:mm:ss").format(new Date()));
 				lock.notifyAll();
 				flag = false;
-				_2_SleepUtils.second(2);
+				SleepUtils.second(2);
 			}
 			//Notify释放了锁
 //			_2_SleepUtils.second(2);
@@ -74,7 +74,7 @@ public class _5_wait_notify {
 			//再次加锁(此时，Notify与Wait同时竞争锁）
 			synchronized (lock) {
 				System.out.println(Thread.currentThread() + " hold lock again. sleep @ " + new SimpleDateFormat("HH:mm:ss").format(new Date()));
-				_2_SleepUtils.second(5);
+				SleepUtils.second(5);
 			}
 		}
 	}

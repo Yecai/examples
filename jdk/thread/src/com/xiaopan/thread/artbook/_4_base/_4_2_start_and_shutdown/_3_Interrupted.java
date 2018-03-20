@@ -2,7 +2,7 @@ package com.xiaopan.thread.artbook._4_base._4_2_start_and_shutdown;
 
 import java.util.concurrent.TimeUnit;
 
-import com.xiaopan.thread.artbook._4_base._4_1_Introduction._2_SleepUtils;
+import com.xiaopan.thread.artbook._4_base._4_1_Introduction.SleepUtils;
 
 /**
  * @Package: com.xiaopan.thread.artbook._4_base._4_2_start_and_shutdown
@@ -34,14 +34,14 @@ public class _3_Interrupted {
 		System.out.println("busyThread interrupted is " + busyThread.isInterrupted());
 		
 		//·ÀÖ¹sleepThreadºÍbusyThreadÁ¢¼´ÍË³ö
-		_2_SleepUtils.second(2);
+		SleepUtils.second(2);
 	}
 	
 	static class SleepRunner implements Runnable {
 		@Override
 		public void run() {
 			while(true) {
-				_2_SleepUtils.second(10);
+				SleepUtils.second(10);
 			}
 		}
 	}

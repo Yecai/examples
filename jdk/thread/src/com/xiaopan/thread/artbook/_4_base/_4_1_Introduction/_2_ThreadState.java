@@ -23,7 +23,7 @@ public class _2_ThreadState {
 		@Override
 		public void run() {
 			while(true) {
-				_2_SleepUtils.second(100);
+				SleepUtils.second(100);
 			}
 		}
 	}
@@ -51,7 +51,7 @@ public class _2_ThreadState {
 		public void run() {
 			synchronized (Blocked.class) {
 				while(true) {
-					_2_SleepUtils.second(100);
+					SleepUtils.second(100);
 				}
 			}
 		}
