@@ -3,6 +3,7 @@ package com.xiaopan.time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.temporal.ChronoUnit;
 
 public class _2_LocalDate_LocalTime {
     public static void main(String[] args) {
@@ -19,6 +20,8 @@ public class _2_LocalDate_LocalTime {
         
         //LocalDate和LocalTime和Instant一样，实例是不可变的
         
-        
+        //加减与比较
+        LocalDate localDate3 = localDate.plus(5, ChronoUnit.HOURS);
+        localDate3.isBefore(localDate);
     }
 }
