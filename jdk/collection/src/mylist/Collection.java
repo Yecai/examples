@@ -1,118 +1,119 @@
 package mylist;
 
 import java.util.Iterator;
+import java.lang.Iterable; //foreachåªè®¤å®˜æ–¹Iterable
 
 /**
- * ¼¯ºÏ½Ó¿Ú
- * @param <E>¼¯ºÏÔªËØ
+ * é›†åˆæŽ¥å£
+ * @param <E>é›†åˆå…ƒç´ 
  */
 public interface Collection<E> extends Iterable<E>{
     
-    //²éÑ¯²Ù×÷
+    //æŸ¥è¯¢æ“ä½œ
     /**
-     * ·µ»Ø¼¯ºÏÔªËØµÄÊýÁ¿
-     * Èç¹ûÊýÁ¿´óÓÚ<tt>Integer.MAX_VELUE</tt>£¬·µ»Ø<tt>Integer.MAX_VELUE</tt>
+     * è¿”å›žé›†åˆå…ƒç´ çš„æ•°é‡
+     * å¦‚æžœæ•°é‡å¤§äºŽ<tt>Integer.MAX_VELUE</tt>ï¼Œè¿”å›ž<tt>Integer.MAX_VELUE</tt>
      * 
-     * @return ¼¯ºÏÔªËØµÄÊýÁ¿
+     * @return é›†åˆå…ƒç´ çš„æ•°é‡
      */
     int size();
     
     /**
-     * ¼¯ºÏÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿Õ£¬·µ»Øtrue
+     * é›†åˆæ˜¯å¦ä¸ºç©ºï¼Œå¦‚æžœä¸ºç©ºï¼Œè¿”å›žtrue
      * 
-     * @return true:¼¯ºÏÎª¿Õ
+     * @return true:é›†åˆä¸ºç©º
      */
     boolean isEmpty();
     
     /**
-     * ¼¯ºÏÖÐÊÇ·ñ°üº¬ÌØ¶¨ÔªËØo
-     * ¼¯ºÏ²»Îª¿ÕÇÒ°üº¬£¬²Å·µ»Øtrue
+     * é›†åˆä¸­æ˜¯å¦åŒ…å«ç‰¹å®šå…ƒç´ o
+     * é›†åˆä¸ä¸ºç©ºä¸”åŒ…å«ï¼Œæ‰è¿”å›žtrue
      * 
-     * @return true:¼¯ºÏ°üº¬ÔªËØo
+     * @return true:é›†åˆåŒ…å«å…ƒç´ o
      */
     boolean contains(Object o);
     
     /**
-     * ·µ»ØÒ»¸ö°üº¬¼¯ºÏËùÓÐÔªËØµÄµü´úÆ÷
-     * µü´úÆ÷ÖÐµÄÔªËØÊÇÎÞÐèµÄ£¨³ý·ÇÌØÊâÓÐÐò¼¯ºÏ£©
+     * è¿”å›žä¸€ä¸ªåŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ çš„è¿­ä»£å™¨
+     * è¿­ä»£å™¨ä¸­çš„å…ƒç´ æ˜¯æ— éœ€çš„ï¼ˆé™¤éžç‰¹æ®Šæœ‰åºé›†åˆï¼‰
      * 
-     * @return °üº¬¼¯ºÏËùÓÐÔªËØµÄµü´úÆ÷
+     * @return åŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ çš„è¿­ä»£å™¨
      */
     Iterator<E> iterator();
     
     /**
-     * ·µ»Ø°üº¬¼¯ºÏËùÓÐÔªËØµÄÊý×é
-     * Êý×éÔªËØË³ÐòÓÉ¼¯ºÏ±£Ö¤
+     * è¿”å›žåŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ çš„æ•°ç»„
+     * æ•°ç»„å…ƒç´ é¡ºåºç”±é›†åˆä¿è¯
      * 
-     * ·µ»ØµÄÊý×éÊÇ¡°°²È«µÄ¡±£¬¼´·µ»ØµÄÊÇÒ»¸öÐÂ½¨µÄÊý×é£¬²Ù×÷²»»áÓ°Ïñµ½Ô­¼¯ºÏ
+     * è¿”å›žçš„æ•°ç»„æ˜¯â€œå®‰å…¨çš„â€ï¼Œå³è¿”å›žçš„æ˜¯ä¸€ä¸ªæ–°å»ºçš„æ•°ç»„ï¼Œæ“ä½œä¸ä¼šå½±åƒåˆ°åŽŸé›†åˆ
      * 
-     * @return °üº¬¼¯ºÏËùÓÐÔªËØµÄÊý×é
+     * @return åŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ çš„æ•°ç»„
      */
     Object[] toArray();
     
     /**
-     * ·µ»ØÌØ¶¨¶ÔÏóÊý×é£¬°üº¬¼¯ºÏËùÓÐÔªËØ
-     * Êý×éÔªËØË³ÐòÓÉ¼¯ºÏ±£Ö¤
-     * Èç¹û´«ÈëµÄ¶ÔÏóÊý×éÎª¿Õ£¬Ôò»áÐÂ½¨Ò»¸öÊý×é·µ»Ø£¬Èç¹û´«ÈëµÄÊý×é¹ý´ó£¬ÔòÊý×éºóÐø¶ÔÏó½«±»ÉèÖÃÎªnull·µ»Ø
+     * è¿”å›žç‰¹å®šå¯¹è±¡æ•°ç»„ï¼ŒåŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ 
+     * æ•°ç»„å…ƒç´ é¡ºåºç”±é›†åˆä¿è¯
+     * å¦‚æžœä¼ å…¥çš„å¯¹è±¡æ•°ç»„ä¸ºç©ºï¼Œåˆ™ä¼šæ–°å»ºä¸€ä¸ªæ•°ç»„è¿”å›žï¼Œå¦‚æžœä¼ å…¥çš„æ•°ç»„è¿‡å¤§ï¼Œåˆ™æ•°ç»„åŽç»­å¯¹è±¡å°†è¢«è®¾ç½®ä¸ºnullè¿”å›ž
      * 
-     * @return ÌØ¶¨¶ÔÏóÊý×é£¬°üº¬¼¯ºÏËùÓÐÔªËØ
+     * @return ç‰¹å®šå¯¹è±¡æ•°ç»„ï¼ŒåŒ…å«é›†åˆæ‰€æœ‰å…ƒç´ 
      */
     <T> T[] toArray(T[] a);
     
-    //ÐÞ¸Ä²Ù×÷
+    //ä¿®æ”¹æ“ä½œ
     
     /**
-     * Íù¼¯ºÏÐÂÔöÔªËØ
+     * å¾€é›†åˆæ–°å¢žå…ƒç´ 
      * 
-     * @return true:Ìí¼Ó³É¹¦
+     * @return true:æ·»åŠ æˆåŠŸ
      */
     boolean add(E e);
     
     /**
-     * ´Ó¼¯ºÏÉ¾³ýÔªËØ
+     * ä»Žé›†åˆåˆ é™¤å…ƒç´ 
      * 
-     * @return true:É¾³ý³É¹¦
+     * @return true:åˆ é™¤æˆåŠŸ
      */
     boolean remove(Object e);
     
     
-    //ÅúÁ¿²Ù×÷
+    //æ‰¹é‡æ“ä½œ
     
     /**
-     * ¼¯ºÏÊÇ·ñ°üº¬¸ø¶¨¼¯ºÏÖÐµÄËùÓÐÔªËØ
+     * é›†åˆæ˜¯å¦åŒ…å«ç»™å®šé›†åˆä¸­çš„æ‰€æœ‰å…ƒç´ 
      * 
-     * @return true:¼¯ºÏ°üº¬¸ø¶¨¼¯ºÏÖÐµÄËùÓÐÔªËØ
+     * @return true:é›†åˆåŒ…å«ç»™å®šé›†åˆä¸­çš„æ‰€æœ‰å…ƒç´ 
      */
     boolean containsAll(Collection<?> c);
     
     /**
-     * ½«¸ø¶¨¼¯ºÏÖÐµÄËùÓÐÔªËØÌí¼Óµ½¼¯ºÏ
+     * å°†ç»™å®šé›†åˆä¸­çš„æ‰€æœ‰å…ƒç´ æ·»åŠ åˆ°é›†åˆ
      * 
-     * @return true:Ìí¼Ó³É¹¦
+     * @return true:æ·»åŠ æˆåŠŸ
      */
     boolean addAll(Collection<? extends E> c);
     
     /**
-     * ´Ó¼¯ºÏÖÐÉ¾³ýÖ¸¶¨¼¯ºÏÖÐµÄËùÓÐÔªËØ
-     * É¾³ý³É¹¦ºó£¬½«Ã»ÓÐÓëÖ¸¶¨¼¯ºÏÖØ¸´µÄÔªËØ
+     * ä»Žé›†åˆä¸­åˆ é™¤æŒ‡å®šé›†åˆä¸­çš„æ‰€æœ‰å…ƒç´ 
+     * åˆ é™¤æˆåŠŸåŽï¼Œå°†æ²¡æœ‰ä¸ŽæŒ‡å®šé›†åˆé‡å¤çš„å…ƒç´ 
      * 
-     * @return true:¼¯ºÏÖÐÓÐÔªËØ±ä¶¯
+     * @return true:é›†åˆä¸­æœ‰å…ƒç´ å˜åŠ¨
      */
     boolean removeAll(Collection<?> c);
     
     /**
-     * ±£Áô¼¯ºÏÖÐËùÓÐÓëÖ¸¶¨¼¯ºÏÖØ¸´µÄÔªËØ£¬ÆäËûÔªËØ¶¼±»É¾³ý
+     * ä¿ç•™é›†åˆä¸­æ‰€æœ‰ä¸ŽæŒ‡å®šé›†åˆé‡å¤çš„å…ƒç´ ï¼Œå…¶ä»–å…ƒç´ éƒ½è¢«åˆ é™¤
      * 
-     * @return true:¼¯ºÏÖÐÓÐÔªËØ±ä¶¯
+     * @return true:é›†åˆä¸­æœ‰å…ƒç´ å˜åŠ¨
      */
     boolean retainAll(Collection<?> c);
     
     /**
-     * É¾³ý¼¯ºÏÖÐËùÓÐÔªËØ
+     * åˆ é™¤é›†åˆä¸­æ‰€æœ‰å…ƒç´ 
      */
     void clear();
     
-    //±È½ÏºÍhash
+    //æ¯”è¾ƒå’Œhash
     boolean equals(Object o);
     int hashCode();
 }

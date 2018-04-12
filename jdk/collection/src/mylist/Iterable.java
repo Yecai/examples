@@ -3,15 +3,15 @@ package mylist;
 import java.util.Iterator;
 
 /**
- * ÊµÏÖforeachÑ­»·µÄµü´úÆ÷½Ó¿Ú
+ * å®ç°foreachå¾ªç¯çš„è¿­ä»£å™¨æ¥å£
  * 
- * @param <T> µü´úÆ÷·µ»ØµÄ¶ÔÏó
+ * @param <T> è¿­ä»£å™¨è¿”å›çš„å¯¹è±¡
  */
 public interface Iterable<T> {
     
     /**
-     * ·µ»ØT¶ÔÏóµÄµü´úÆ÷
-     * @return µü´úÆ÷
+     * è¿”å›Tå¯¹è±¡çš„è¿­ä»£å™¨
+     * @return è¿­ä»£å™¨
      */
     Iterator<T> iterator();
 
