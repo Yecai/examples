@@ -3,6 +3,7 @@ package mymap;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Objects;
 import java.util.Set;
 
 public interface Map<K, V> {
@@ -85,6 +86,9 @@ public interface Map<K, V> {
 	 */
 	Collection<V> values();
 	
+	/**
+	 * 返回map中entry的set集合
+	 */
 	Set<Map.Entry<K, V>> entrySet();
 	
 	/**
@@ -98,7 +102,7 @@ public interface Map<K, V> {
 		 /**
 		  * 返回value
 		  */
-		 K getValue();
+		 V getValue();
 		 /**
 		  * 替换原value为指定的value
 		  * 
@@ -110,9 +114,41 @@ public interface Map<K, V> {
 		 
 		 int hashCode();
 		 
+		 /**
+		  * key排序比较器
+		  */
 		 public static <K extends Comparable<? super K>, V> Comparator<Map.Entry<K, V>> comparingByKey() {
 			 return (Comparator<Map.Entry<K, V>> & Serializable) 
 				(c1, c2) -> c1.getKey().compareTo(c2.getKey());
 		 }
+		 /**
+		  * value排序比较器
+		  */
+		 public static <K,V extends Comparable<? super V>> Comparator<Map.Entry<K, V>> comparingByValue() {
+			 return (Comparator<Map.Entry<K, V>> & Serializable)
+				(c1, c2) -> c1.getValue().compareTo(c2.getValue());
+		 }
+		 /**
+		  * 使用指定比较器排序key
+		  */
+		 public static <K, V> Comparator<Map.Entry<K, V>> comparingByKey(Comparator<? super K> cmp) {
+			 Objects.requireNonNull(cmp);
+			 return (Comparator<Map.Entry<K, V>> & Serializable)
+					 (c1, c2) -> cmp.compare(c1.getKey(), c2.getKey());
+		 }
+		 /**
+		  * 使用指定比较器排序value
+		  */
+		 public static <K, V> Comparator<Map.Entry<K, V>> comparingByValue(Comparator<? super V> cmp) {
+			 Objects.requireNonNull(cmp);
+			 return (Comparator<Map.Entry<K, V>> & Serializable)
+					 (c1, c2) -> cmp.compare(c1.getValue(), c2.getValue());
+		 }
 	}
+	
+	//比较和hash
+	
+	boolean equals(Object o);
+	
+	int hashCode();
 }
