@@ -4,12 +4,12 @@ import java.time.LocalDateTime;
 
 public class _3_LocalDateTime {
     public static void main(String[] args) {
-      //LocalDateTimeÊÇLocalDateºÍLocalTimeµÄ×éºÏÌå£¬±íÊ¾µÄÊÇ²»´øÊ±ÇøµÄÈÕÆÚ¼°Ê±¼ä
+      //LocalDateTimeæ˜¯LocalDateå’ŒLocalTimeçš„ç»„åˆä½“ï¼Œè¡¨ç¤ºçš„æ˜¯ä¸å¸¦æ—¶åŒºçš„æ—¥æœŸåŠæ—¶é—´
         LocalDateTime localDateTime = LocalDateTime.now();
         
-        //µ±Ç°Ê±¼ä¼ÓÉÏ25Ğ¡Ê±3·ÖÖÓ
+        //å½“å‰æ—¶é—´åŠ ä¸Š25å°æ—¶3åˆ†é’Ÿ
         LocalDateTime inTheFuture = localDateTime.plusHours(25).plusMinutes(3);
-        //Í¬Ñù¿ÉÒÔÓÃÔÚlocalTimeºÍlocalDateÖĞ
+        //åŒæ ·å¯ä»¥ç”¨åœ¨localTimeå’ŒlocalDateä¸­
         
     }
 }

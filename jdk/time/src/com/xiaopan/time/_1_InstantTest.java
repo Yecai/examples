@@ -7,32 +7,32 @@ import java.util.Date;
 
 public class _1_InstantTest {
     public static void main(String[] args) {
-        //µ±Ç°Ê±¼ä
+        //å½“å‰æ—¶é—´
         Instant instant = Instant.now();
         System.out.println(instant);
         
-        //Data×ªInstant
+        //Dataè½¬Instant
         Instant instant1 = Instant.ofEpochMilli(new Date().getTime());
         System.out.println(instant1);
         
-        //×Ö·û´®×ªInstant
-        //Instant´ú±íµÄÊÇÒ»¸öÊ±¼ä£¬²¢²»°üÀ¨Ê±ÇøµÄ¸ÅÄî£¬ËùÒÔ±ØĞë´«ÈëµÄÊÇ·ûºÏUTC¸ñÊ½µÄ×Ö·û´®
+        //å­—ç¬¦ä¸²è½¬Instant
+        //Instantä»£è¡¨çš„æ˜¯ä¸€ä¸ªæ—¶é—´ï¼Œå¹¶ä¸åŒ…æ‹¬æ—¶åŒºçš„æ¦‚å¿µï¼Œæ‰€ä»¥å¿…é¡»ä¼ å…¥çš„æ˜¯ç¬¦åˆUTCæ ¼å¼çš„å­—ç¬¦ä¸²
         Instant instant2 = Instant.parse("1995-10-23T10:12:35.00Z");
         System.out.println(instant2);
         
-        //Ê±¼äÔËËã
+        //æ—¶é—´è¿ç®—
         Instant instant3 = instant2.plus(Duration.ofHours(5)).plusMillis(4);
-        //InstantÃ¿´ÎÔËËã²úÉúĞÂÊµÀı
+        //Instantæ¯æ¬¡è¿ç®—äº§ç”Ÿæ–°å®ä¾‹
         System.out.println(instant2 == instant3);
         
-        //Ê±¼äÔËËã£¬ÒÔÏÂÁ½ÖÖ·½Ê½µÈ¼Û
-        instant3.minus(5, ChronoUnit.DAYS); //·½Ê½1
-        instant3.minus(Duration.ofDays(5)); //·½Ê½2
+        //æ—¶é—´è¿ç®—ï¼Œä»¥ä¸‹ä¸¤ç§æ–¹å¼ç­‰ä»·
+        instant3.minus(5, ChronoUnit.DAYS); //æ–¹å¼1
+        instant3.minus(Duration.ofDays(5)); //æ–¹å¼2
         
-        //¼ÆËãÁ½¸öInstantÖ®¼äµÄ·ÖÖÓÊı
+        //è®¡ç®—ä¸¤ä¸ªInstantä¹‹é—´çš„åˆ†é’Ÿæ•°
         long diffAsMinutes = ChronoUnit.MINUTES.between(instant, instant2);
         
-        //Instant±È½Ï
+        //Instantæ¯”è¾ƒ
         instant1.compareTo(instant3);
         instant1.isAfter(instant2);
         instant1.isBefore(instant2);

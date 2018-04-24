@@ -7,20 +7,20 @@ import java.time.temporal.ChronoUnit;
 
 public class _2_LocalDate_LocalTime {
     public static void main(String[] args) {
-        //LocalDate±íÊ¾²»´øÊ±ÇøµÄÈÕÆÚ£¬±ÈÈç1-1-2000¡£LocalTime±íÊ¾²»´øÊ±ÇøµÄÊ±¼ä£¬±ÈÈç04:44:50.12
+        //LocalDateè¡¨ç¤ºä¸å¸¦æ—¶åŒºçš„æ—¥æœŸï¼Œæ¯”å¦‚1-1-2000ã€‚LocalTimeè¡¨ç¤ºä¸å¸¦æ—¶åŒºçš„æ—¶é—´ï¼Œæ¯”å¦‚04:44:50.12
         
-        //»ñÈ¡LocalDate
+        //è·å–LocalDate
         LocalDate localDate = LocalDate.now();
-        LocalDate localDate1 = LocalDate.ofYearDay(2005, 86);//2005ÄêµÚ86Ìì
-        LocalDate localDate2 = LocalDate.of(2013, Month.AUGUST, 10); //2013Äê8ÔÂ10ÈÕ
+        LocalDate localDate1 = LocalDate.ofYearDay(2005, 86);//2005å¹´ç¬¬86å¤©
+        LocalDate localDate2 = LocalDate.of(2013, Month.AUGUST, 10); //2013å¹´8æœˆ10æ—¥
         
         LocalTime localTime = LocalTime.of(22, 33); //10:33 PM
         LocalTime localTime2 = LocalTime.now();
-        LocalTime localTime3 = LocalTime.ofSecondOfDay(4503); //·µ»ØÒ»ÌìÖĞµÚ4503Ãë£¨1:15:30 AM£©
+        LocalTime localTime3 = LocalTime.ofSecondOfDay(4503); //è¿”å›ä¸€å¤©ä¸­ç¬¬4503ç§’ï¼ˆ1:15:30 AMï¼‰
         
-        //LocalDateºÍLocalTimeºÍInstantÒ»Ñù£¬ÊµÀıÊÇ²»¿É±äµÄ
+        //LocalDateå’ŒLocalTimeå’ŒInstantä¸€æ ·ï¼Œå®ä¾‹æ˜¯ä¸å¯å˜çš„
         
-        //¼Ó¼õÓë±È½Ï
+        //åŠ å‡ä¸æ¯”è¾ƒ
         LocalDate localDate3 = localDate.plus(5, ChronoUnit.HOURS);
         localDate3.isBefore(localDate);
     }
