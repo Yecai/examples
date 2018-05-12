@@ -3,6 +3,7 @@ package mymap;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.LinkedHashMap;
 import java.util.Objects;
 import java.util.Set;
 
@@ -258,14 +259,87 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Clone
 		}
 	}
 	
-	final Node<K, V> resize() {
+	final Node<K, V>[] resize() {
+		Node<K, V>[] oldTab = table;
+		int oldCap = (oldTab == null) ? 0 : oldTab.length;
+		int oldThr = threshold;
+		int newCap, newThr = 0;
+		if (oldCap > 0) {
+			if (oldCap >= MAXIMUM_CAPACITY) {
+				threshold = Integer.MAX_VALUE;
+				return oldTab;
+			} else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY && 
+					oldCap >= DEFAULT_INITIAL_CAPACITY) {
+				newThr = oldThr << 1; // 阀值双倍
+			}
+		} else if (oldThr > 0) {
+			newCap = oldThr; //初始容量设置为阀值
+		} else { //初始阀值为0，代表使用默认设置
+			newCap = DEFAULT_INITIAL_CAPACITY;
+			newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+		}
 		
+		if (newThr == 0) {
+			float ft = (float)newCap * loadFactor;
+			newThr = (newCap < MAXIMUM_CAPACITY && ft < (float)MAXIMUM_CAPACITY ?
+					 (int)ft : Integer.MAX_VALUE);
+		}
+		threshold = newThr;
+		Node<K, V>[] newTab = (Node<K, V>[])new Node[newCap];
+		table = newTab;
+		if (oldTab != null) {
+			for (int j = 0; j < oldCap; ++j) {
+				Node<K, V> e;
+				if ((e = oldTab[j]) != null) {
+					oldTab[j] = null;
+					if (e.next == null) {
+						newTab[e.hash & (newCap - 1)] = e;
+					} else if (e instanceof TreeNode) {
+						((TreeNode<K, V>)e).split(this, newTab, j, oldCap);
+					}
+				}
+			}
+		}
 	}
 	
 	@Override
 	public Set<Entry<K, V>> entrySet() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	/* ------------------------------------------------------------ */
+    // Tree bins
+	
+	static class LinkedEntry<K, V> extends Node<K, V> {
+		Entry<K, V> before, after;
+		public LinkedEntry(int hash, K key, V value, Node<K, V> next) {
+			super(hash, key, value, next);
+		}
+	}
+	static final class TreeNode<K, V> extends LinkedEntry<K, V> {
+		TreeNode<K, V> parent; //红黑树的链接
+		TreeNode<K, V> left;
+		TreeNode<K, V> right;
+		TreeNode<K, V> prev; //需要在删除后取消链接
+		boolean red;
+		public TreeNode(int hash, K key, V value, Node<K, V> next) {
+			super(hash, key, value, next);
+		}
+		
+		/**
+		 * 返回包含此节点的树的根节点
+		 */
+		final TreeNode<K, V> root() {
+			for (TreeNode<K, V> r = this, p;;) {
+				if ((p = r.parent) == null) {
+					return r;
+				}
+				r = p;
+			}
+		}
+		
+		
 	}
 
 }

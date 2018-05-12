@@ -9,6 +9,8 @@ public class Test {
 	
 	public static void hash(Object o) {
 		int h = o.hashCode();
+		int a = o.hashCode() & 15;
+		System.out.print("a=" + a + ",");
 		System.out.print("h="+h + ",");
 		int l = h >>> 16;
 		System.out.print("l="+l+",");
