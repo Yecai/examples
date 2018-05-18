@@ -1,6 +1,8 @@
 package com.xiaopan.time;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class _3_LocalDateTime {
     public static void main(String[] args) {
@@ -11,5 +13,7 @@ public class _3_LocalDateTime {
         LocalDateTime inTheFuture = localDateTime.plusHours(25).plusMinutes(3);
         //同样可以用在localTime和localDate中
         
+        
+        LocalDateTime todayEnd = LocalDateTime.of(LocalDate.now(), LocalTime.MAX);
     }
 }

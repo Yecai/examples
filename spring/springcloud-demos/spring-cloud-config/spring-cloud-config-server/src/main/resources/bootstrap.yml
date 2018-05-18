@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: spring-cloud-config-server #对应配置文件名称
+  profiles:
+    active: dev #环境，多个以逗号分隔
