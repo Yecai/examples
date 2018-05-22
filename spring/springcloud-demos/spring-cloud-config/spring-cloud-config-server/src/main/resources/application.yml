@@ -6,4 +6,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Yecai/examples/blob/master/spring/springcloud-demos/spring-cloud-config/config-repo
+#           uri: file:///D:/config-repo
+          uri: https://github.com/Yecai/config-repo
+          force-pull: true
