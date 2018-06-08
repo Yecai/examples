@@ -27,15 +27,51 @@ public class JmxReader {
             Map<String, Long> heapMemoryUsage = getHeapMemoryUsage();
             String loadedClassCount = getAttribute("java.lang:type=ClassLoading", "LoadedClassCount");
 
-            Set<ObjectName> objectNames = mbsc.queryNames(null, null);
+            Set<ObjectName> objectNames = new TreeSet<ObjectName>(mbsc.queryNames(null, null));
             for (ObjectName name : objectNames) {
-                System.out.println("ObjectName : " + name);
+//                System.out.println(name);
             }
-            System.out.println("availableProcessors : " + availableProcessors);
-            System.out.println("processCpuTime : " + processCpuTime);
-            System.out.println("heapMemoryUsage : " + heapMemoryUsage);
-            System.out.println("loadedClassCount : " + loadedClassCount);
-            System.out.println("threadCount : " + threadCount);
+
+            System.out.println();
+            System.out.println();
+            System.out.println();
+
+
+
+            Set<ObjectInstance> objectInstances = mbsc.queryMBeans(null, null);
+            Set<String> names = new TreeSet<String>();
+            Set<MBeanInfo> mBeanInfos = new TreeSet<MBeanInfo>();
+            for (ObjectInstance objectInstance : objectInstances) {
+                names.add(objectInstance.getObjectName().toString());
+                MBeanInfo mBeanInfo = mbsc.getMBeanInfo(objectInstance.getObjectName());
+//                mBeanInfos.add(mBeanInfo);
+                if ("java.lang:type=OperatingSystem".equalsIgnoreCase(objectInstance.getObjectName().toString())) {
+                    System.out.println(objectInstance.getObjectName());
+                    MBeanAttributeInfo[] attributeInfos = mBeanInfo.getAttributes();
+                    for (MBeanAttributeInfo attributeInfo : attributeInfos) {
+                        System.out.println("1===" + attributeInfo.getName());
+//                        System.out.println("2===" + attributeInfo.getType());
+//                        System.out.println("3===" + attributeInfo.getDescription());
+//                        Descriptor descriptor = attributeInfo.getDescriptor();
+//                        String[] fieldNames = descriptor.getFieldNames();
+//                        for (String fieldName : fieldNames) {
+//                            System.out.println("4===" + fieldName);
+//                            System.out.println("4===" + descriptor.getFieldValue(fieldName));
+//                        }
+
+                        Object attribute = mbsc.getAttribute(objectInstance.getObjectName(), attributeInfo.getName());
+                        System.out.println("4===" + attribute.toString());
+                    }
+                }
+
+            }
+
+//            names.forEach(name -> System.out.println(name));
+//            System.out.println("availableProcessors : " + availableProcessors);
+//            System.out.println("processCpuTime : " + processCpuTime);
+//            System.out.println("heapMemoryUsage : " + heapMemoryUsage);
+//            System.out.println("loadedClassCount : " + loadedClassCount);
+//            System.out.println("threadCount : " + threadCount);
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
