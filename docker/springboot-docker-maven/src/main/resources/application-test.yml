@@ -1,0 +1,7 @@
+#-Dspring.profiles.active=test
+#OS env: SPRING_PROFILES_ACTIVE=test
+
+server:
+  port: 8081
+
+name: test!

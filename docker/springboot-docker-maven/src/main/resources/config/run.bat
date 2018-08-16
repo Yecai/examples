@@ -1,0 +1,2 @@
+@echo off
+java -server -Xmx2g -Xms2g -Xmn512m -Xss256k -XX:MaxTenuringThreshold=15 -XX:+DisableExplicitGC -XX:+UseG1GC -XX:LargePageSizeInBytes=128m -XX:+AggressiveOpts -XX:+UseBiasedLocking -jar springboot-docker-maven.jar
