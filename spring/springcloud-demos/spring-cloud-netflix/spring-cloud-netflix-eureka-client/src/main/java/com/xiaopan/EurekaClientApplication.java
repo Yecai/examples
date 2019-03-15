@@ -1,24 +1,24 @@
 package com.xiaopan;
 
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@EnableEurekaClient
 @RestController
-public class Application {
-	
-	@Value("${foo}")
-    private String foo;
+public class EurekaClientApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello World!" + foo;
+        return "Hello world";
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(EurekaClientApplication.class, args);
     }
+
 }
