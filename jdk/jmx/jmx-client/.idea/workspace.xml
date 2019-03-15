@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01713761-4b90-4fee-9722-81c40460bd1d" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../jmx-reader/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" value="5.19.0" />
+      </map>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="JmxReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../jmx-reader/src/main/java/com/xiaopan/JmxReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1310#1322#0" expanded="true" />
+                <element signature="e#1684#1692#0" expanded="true" />
+                <element signature="e#1763#1774#0" expanded="true" />
+                <element signature="e#4291#4305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Descriptor.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/Descriptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3465">
+              <caret line="426" column="2" lean-forward="true" selection-start-line="426" selection-start-column="2" selection-end-line="426" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MBeanFeatureInfo.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanFeatureInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="129" column="21" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="21" />
+              <folding>
+                <element signature="e#3326#3327#0" expanded="true" />
+                <element signature="e#3419#3420#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MBeanAttributeInfo.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanAttributeInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4320">
+              <caret line="91" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MBeanInfo.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="311" column="31" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectInstance.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/ObjectInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+              <folding>
+                <element signature="e#3671#3672#0" expanded="true" />
+                <element signature="e#3698#3699#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeSet.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/java/util/TreeSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="305" column="30" selection-start-line="305" selection-start-column="25" selection-end-line="305" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/java/util/TreeMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="1293" selection-start-line="1293" selection-end-line="1293" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getProcessCpuTime</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/xiaopan/QuotationWebApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiaopan/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiaopan/JmxClientApplication.java" />
+        <option value="$PROJECT_DIR$/../jmx-reader/src/main/java/com/xiaopan/JmxReader.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/DevelopTools/maven/apache-maven-3.2.5" />
+        <option name="userSettingsFile" value="D:\DevelopTools\maven\apache-maven-3.2.5\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jmx-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jmx-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jmx-client" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1400" />
+    <option name="height" value="959" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="jmx-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jmx-reader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jmx-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jmx-reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jmx-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jmx-reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jmx-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jmx-reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jmx-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jmx-reader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaopan" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanServerConnection.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xiaopan" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\local\github\examples\jdk\jmx\jmx-client\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JmxClientApplication">
+    <configuration name="JmxClientApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaopan.JmxClientApplication" />
+      <module name="jmx-client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaopan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="JmxReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaopan.JmxReader" />
+      <module name="jmx-reader" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaopan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JmxClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jmx-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaopan.JmxClientApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.JmxClientApplication" />
+      <item itemvalue="Application.JmxClientApplication" />
+      <item itemvalue="Application.JmxReader" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JmxReader" />
+        <item itemvalue="Application.JmxClientApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01713761-4b90-4fee-9722-81c40460bd1d" name="Default" comment="" />
+      <created>1528352265525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528352265525</updated>
+      <workItem from="1528352270459" duration="18055000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18055000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Console" order="10" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="2" weight="0.15572916" />
+      <window_info anchor="right" id="Redis Servers" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="9" />
+      <window_info id="Capture Tool" order="9" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="15" weight="0.39955848" />
+      <window_info anchor="bottom" id="TODO" order="18" />
+      <window_info id="DB Browser" order="3" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.3289183" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" x="0" y="0" width="434" height="815" id="Documentation" side_tool="true" visible="true" weight="0.19166666" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="14" visible="true" weight="0.38189846" />
+      <window_info anchor="bottom" id="Spring" order="2" />
+      <window_info anchor="bottom" id="CheckStyle" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info id="JRebel" order="1" side_tool="true" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="12" />
+      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="11" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info id="Designer" order="0" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info id="JRebel" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="2" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Run" order="14" visible="true" weight="0.36865342" />
+      <window_info anchor="bottom" id="Cvs" order="16" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info id="DB Browser" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info id="Capture Tool" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Redis Servers" order="0" />
+      <window_info anchor="bottom" id="CheckStyle" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.3289183" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="2" visible="true" weight="0.15572916" />
+      <window_info anchor="bottom" id="Find" order="13" />
+      <window_info anchor="bottom" id="JRebel Executor" order="9" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="JRebel Console" order="10" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="12" />
+      <window_info anchor="bottom" id="TODO" order="18" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="17" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="15" weight="0.39955848" />
+      <window_info anchor="right" id="Bean Validation" order="6" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../jmx-reader/src/main/java/com/xiaopan/JmxReader.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../jmx-reader/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/remote/JMXServiceURL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="277" column="20" selection-start-line="277" selection-start-column="20" selection-end-line="277" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/remote/JMXConnectorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="263" column="30" selection-start-line="263" selection-start-column="18" selection-end-line="263" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiaopan/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-412">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiaopan/JmxClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="305" column="30" selection-start-line="305" selection-start-column="25" selection-end-line="305" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1293" selection-start-line="1293" selection-end-line="1293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/ObjectInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <element signature="e#3671#3672#0" expanded="true" />
+            <element signature="e#3698#3699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="311" column="31" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanFeatureInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="129" column="21" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="21" />
+          <folding>
+            <element signature="e#3326#3327#0" expanded="true" />
+            <element signature="e#3419#3420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/AttributeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4510">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanServerConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="577" column="20" lean-forward="true" selection-start-line="577" selection-start-column="20" selection-end-line="577" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/MBeanAttributeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4320">
+          <caret line="91" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/DevelopTools/JDK/jdk1.8.0_171/src.zip!/javax/management/Descriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3465">
+          <caret line="426" column="2" lean-forward="true" selection-start-line="426" selection-start-column="2" selection-end-line="426" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../jmx-reader/src/main/java/com/xiaopan/JmxReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1310#1322#0" expanded="true" />
+            <element signature="e#1684#1692#0" expanded="true" />
+            <element signature="e#1763#1774#0" expanded="true" />
+            <element signature="e#4291#4305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8.0_171</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>jmx-reader</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8.0_171</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

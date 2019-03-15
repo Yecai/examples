@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:integration="http://www.springframework.org/schema/integration"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/file
+			http://www.springframework.org/schema/integration/file/spring-integration-file.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
+	
+	<!-- 文件输入适配器 -->
+	<file:inbound-channel-adapter id="filesIn" 
+							      directory="file:${java.io.tmpdir}/s-i-file/input"
+							      filename-regex="[a-z]+.txt">
+		<integration:poller id="poller" fixed-delay="5000"></integration:poller>
+	</file:inbound-channel-adapter>
+
+	<!-- 将文件内容装换为字符串 -->
+	<file:file-to-string-transformer input-channel="filesIn" output-channel="strings"/>
+	
+	<!-- 字符串通道 -->
+	<integration:channel id="strings"></integration:channel>
+	
+	<!-- 字符串交给handler处理，并将处理结果输出到filesOut -->
+	<integration:service-activator input-channel="strings"
+							       output-channel="filesOut"
+							       ref="handler"></integration:service-activator>
+					
+	<!-- 文件输出适配器 -->
+	<file:outbound-channel-adapter id="filesOut" directory="file:${java.io.tmpdir}/s-i-file/output"></file:outbound-channel-adapter>
+		
+	<!-- 处理器 -->
+	<bean id="handler" class="com.xiaopan.Handler"></bean>
+							       
+</beans>

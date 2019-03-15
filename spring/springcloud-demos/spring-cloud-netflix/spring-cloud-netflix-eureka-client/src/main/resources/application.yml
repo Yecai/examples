@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: spring-cloud-netfix-eureka-client
+
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://172.17.0.4:8761/eureka/

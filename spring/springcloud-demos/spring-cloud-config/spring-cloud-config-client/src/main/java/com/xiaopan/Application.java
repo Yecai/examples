@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Application {
 	
 	@Value("${foo}")
-	private String foo;
+    private String foo;
 
     @RequestMapping("/")
     public String home() {

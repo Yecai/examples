@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="886c3fb4-d56a-405b-ac49-9a879540f9ed" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-client/spring-cloud-netflix-eureka-client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer1/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer1/spring-cloud-netflix-eureka-server-peers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer1/src/main/java/com/xiaopan/EurekaServerPeersApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer1/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer2/spring-cloud-netflix-eureka-server-peer2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer2/src/main/java/com/xiaopan/EurekaServerPeer2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server-peer2/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-netflix/spring-cloud-netflix-eureka-server/spring-cloud-netflix-eureka-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/springboot-docker-maven/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/springboot-docker-maven/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/jmx-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdk/jmx/jmx-client/jmx-client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/jmx/jmx-reader/jmx-reader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdk/jmx/jmx-reader/jmx-reader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_0_Syntax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_1_Runnable$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_1_Runnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_2_Comparator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_2_Comparator$Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_2_Comparator$Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_2_Comparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_1_simple_examples/_3_Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/Person$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_1_RoboContactsMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_1_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_2_RoboContactsMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_2_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_MyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_RoboContactsMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_Test$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_Test$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_Test$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_3_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_4_RoboContactsMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_2_improve_example/_4_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_10_match.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_11_generate$PersonSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_11_generate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_12_interate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_13_Collectors$PersonSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_13_Collectors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_1_create_and_convert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_2_map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_3_flatMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_4_filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_5_foreach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_6_reduce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_7_limit_skip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_8_sorted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_9_SUService.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/_9_min_max_distinct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/_3_stream_example/__optional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/lambda接口整理.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../jdk/lamdba/Lambda/bin/com/xiaopan/lambda/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../netty/netty_user_guide/src/d_time_server/TimeServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../other/maintenance/pressure/src/main/java/com/xiaopan/pressure/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../other/maintenance/pressure/src/main/java/com/xiaopan/pressure/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../other/maintenance/pressure/src/main/java/com/xiaopan/pressure/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../other/maintenance/pressure/src/main/java/com/xiaopan/pressure/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/src/main/java/com/xiaopan/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/src/main/java/com/xiaopan/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-client/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-config/spring-cloud-config-server/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" value="5.19.0" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1015" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="886c3fb4-d56a-405b-ac49-9a879540f9ed" name="Default" comment="" />
+      <created>1552656975161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552656975161</updated>
+      <workItem from="1552656976488" duration="29000" />
+      <workItem from="1552657014190" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="54000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1015" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="DB Browser" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="CheckStyle" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
