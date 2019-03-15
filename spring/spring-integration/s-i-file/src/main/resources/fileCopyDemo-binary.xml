@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:integration="http://www.springframework.org/schema/integration"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/file
+			http://www.springframework.org/schema/integration/file/spring-integration-file.xsd">
+			
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"></bean>
+	
+	<!-- 文件输入适配器 -->
+	<file:inbound-channel-adapter id="filesIn" directory="file:${java.io.tmpdir}/s-i-file/input"></file:inbound-channel-adapter>
+	
+	<!-- 文件转换器，将filesIn输入的文件转换为二进制，并转送到bytes通道 -->
+	<file:file-to-bytes-transformer input-channel="filesIn" output-channel="bytes" delete-files="true"/>
+	
+	<!-- bytes通道 -->
+	<integration:channel id="bytes"></integration:channel>
+	
+	<!-- 服务激发器，监控bytes通道，将消息发送给handler处理，处理完成后发到filesOut适配器 -->
+	<integration:service-activator input-channel="bytes"
+								   output-channel="filesOut"
+								   ref="handler"></integration:service-activator>
+	
+	<!-- 文件输出适配器，将文件输出到指定目录 -->
+	<file:outbound-channel-adapter id="filesOut" directory="file:${java.io.tmpdir}/s-i-file/output"></file:outbound-channel-adapter>
+	
+	<!-- handler处理器 -->
+	<bean id="handler" class="com.xiaopan.Handler"></bean>
+	
+	<!-- file:inbound-channel-adapter会寻找默认poller -->
+	<integration:poller id="poller" default="true" fixed-delay="5000"></integration:poller>
+</beans>
