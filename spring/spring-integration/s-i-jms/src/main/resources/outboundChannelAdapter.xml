@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:jms="http://www.springframework.org/schema/integration/jms"
+             xmlns:stream="http://www.springframework.org/schema/integration/stream"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/jms
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd
+			http://www.springframework.org/schema/integration/stream
+			http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd">
+
+    <!--
+        主要功能：将控制台输入内容，输出到ActiveMQ的requestQueue队列
+    -->
+
+    <!-- 流输入适配器，控制台输入，输入内容发送到stdinToJmsChannel通道 -->
+    <stream:stdin-channel-adapter id="stdin" channel="stdinToJmsOutChannel"/>
+
+    <!-- 通道 -->
+    <channel id="stdinToJmsOutChannel"/>
+
+    <!-- JMS输出适配器，将stdinToJmsOutChannel中的消息发送到requestQueue -->
+    <jms:outbound-channel-adapter id="jmsout" channel="stdinToJmsOutChannel" destination="requestQueue"/>
+
+</beans:beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:integration="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd">
+
+    <!-- JMS连接工厂，配置使用ActiveMQ连接 -->
+    <bean id="jmsConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <property name="targetConnectionFactory">
+            <bean class="org.apache.activemq.ActiveMQConnectionFactory">
+                <property name="brokerURL" value="vm://localhost?broker.persistent=false"></property>
+            </bean>
+        </property>
+        <property name="sessionCacheSize" value="10"></property>
+        <property name="cacheConsumers" value="false"></property>
+    </bean>
+
+    <!-- 创建ActiveMQ请求队列对象requestQueue，队列名称为queue.demo -->
+    <bean id="requestQueue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="queue.demo" />
+    </bean>
+
+    <!-- 创建ActiveMQ请求广播对象requestTopic，广播名称为topic.demo -->
+    <bean id="requestTopic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="topic.demo"/>
+    </bean>
+
+    <!-- 创建ActiveMQ回复队列对象replayQueue，队列名称为queue.replay -->
+    <bean id="replayQueue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="queue.replay"/>
+    </bean>
+
+    <!-- 轮询器 -->
+    <integration:poller id="poller" default="true" fixed-delay="1000" />
+
+
+</beans>

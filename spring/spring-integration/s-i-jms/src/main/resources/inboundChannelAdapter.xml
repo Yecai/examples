@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:jms="http://www.springframework.org/schema/integration/jms"
+             xmlns:stream="http://www.springframework.org/schema/integration/stream"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/jms
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd
+			http://www.springframework.org/schema/integration/stream
+			http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd">
+
+    <!--
+        监控ActiveMQ的requestQueue队列，一有消息
+        default：输出到控制台
+        testCase：转发到queueChannel通道
+    -->
+
+    <!-- JMS消息输入：JMS消息驱动适配器，监听requestQueue队列，如果有消息，接收后发送到jmsInChannel通道 -->
+    <jms:message-driven-channel-adapter id="jmsIn" destination="requestQueue" channel="jmsInChannel"/>
+
+    <!-- jmsInChannel通道 -->
+    <channel id="jmsInChannel"/>
+
+    <!-- 定义default环境下的bean -->
+    <beans:beans profile="default">
+        <!-- 控制台输输出：stdout流输入适配器，将jmsInChannel的消息输出到控制台，并换行 -->
+        <stream:stdout-channel-adapter id="stdout" channel="jmsInChannel" append-newline="true"></stream:stdout-channel-adapter>
+    </beans:beans>
+
+    <!-- 定义测试用例环境下的bean -->
+    <beans:beans profile="testCase">
+        <!-- 通道桥梁，将jmsInChannel通道的消息，原样转发到queueChannel通道中 -->
+        <bridge input-channel="jmsInChannel" output-channel="queueChannel" />
+
+        <!-- queuChannel通道 -->
+        <channel id="queueChannel">
+            <queue />
+        </channel>
+
+    </beans:beans>
+
+
+</beans:beans>
