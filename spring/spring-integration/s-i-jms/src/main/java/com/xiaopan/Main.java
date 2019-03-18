@@ -1,8 +1,6 @@
 package com.xiaopan;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.env.SystemEnvironmentPropertySource;
 
 import java.util.Scanner;
 
@@ -29,6 +27,7 @@ public class Main {
     };
 
     public static void main(String[] args) {
+        System.setProperty("spring.profiles.active", "default");
         final Scanner scanner = new Scanner(System.in);
 
         System.out.print("\n====================================================="

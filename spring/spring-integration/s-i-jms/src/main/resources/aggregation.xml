@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:int-jms="http://www.springframework.org/schema/integration/jms"
+       xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/jms
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd
+			http://www.springframework.org/schema/integration/stream
+			http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd">
+
+    <!--
+        1、stdin监控控制台输入，将输入内容在链通道中增加header（jms_replyTo:replyQueue），并发送到requestTopic广播
+        2、有两个消费者（输入网关）在同时监控requestTopic广播消息，当requestTopic有新消息，都发送给upcase转换器转换成大写
+        3、转换完成后，根据消息header（jms_replyTo:replyQueue），消息被返回到replyQueue队列
+        4、replyQueue消息驱动适配器监控replyQueue队列，replyQueue中有消息，将消息发送到jmsReplyChannel通道
+        5、jmsReplyChannel配置了聚合器，不同的消息被聚合在一起，满足2条后，被一起发送到out通道（超时40秒，超时后发送到logLateArrivers通道）
+        6、out通道将消息内容输出到控制台
+    -->
+
+    <!-- 控制台输入适配器 -->
+    <int-stream:stdin-channel-adapter id="stdin" channel="stdinToJmsOutChannel"/>
+
+    <!-- 链通道，处理stdinToJmsOutChannel通道的输入 -->
+    <int:chain input-channel="stdinToJmsOutChannel">
+        <int:header-enricher>
+            <!-- 消息header，增加一个jms_replyTo对象，关联到replyQueue -->
+            <int:header name="jms_replyTo" ref="replyQueue"/>
+        </int:header-enricher>
+        <!-- 链输出适配器，输出到requestTopic广播 -->
+        <int-jms:outbound-channel-adapter destination="requestTopic"/>
+    </int:chain>
+
+    <!-- 消息驱动适配器，replyQueue中的消息，发送到jmsReplyChannel通道 -->
+    <int-jms:message-driven-channel-adapter destination="replyQueue" channel="jmsReplyChannel"/>
+
+    <!-- jmsReplyChannel通道 -->
+    <int:channel id="jmsReplyChannel"/>
+
+    <!-- 聚合器，将消息聚合后一起发送
+        input-channel：聚合器从jmsReplyChannel通道获取消息
+        output-channel：聚合器处理完成后结果发送到out通道（此属性可选，因为消息可以在消息头中定义返回的replyChannel通道）
+        group-timeout：如果超时时间内未接受到新消息，不再等待，直接处理当前内容
+        expire-groups-upon-timeout：当一个组超时后，是否删除组内现有消息。false表示不删除，默认为true删除。
+        send-partial-result-on-expiry：和expire-groups-upon-timeout=false结合使用，代表超时后，将发送group中已聚合的部分消息
+        discard-channel：消息超时后发送到logLateArrivers通道
+        correlation-strategy-expression：聚合消息的策略（SpEL表达式），符合策略的消息进行聚合
+        release-strategy-expression：释放消息的策略（SpEL表达式），符合策略的集合消息，进行释放
+     -->
+    <int:aggregator input-channel="jmsReplyChannel" output-channel="out"
+        group-timeout="40000"
+        expire-groups-upon-timeout="false"
+        send-partial-result-on-expiry="true"
+        discard-channel="logLateArrivers"
+        correlation-strategy-expression="headers['jms_correlationId']"
+        release-strategy-expression="size() == 2"/>
+
+    <!-- 日志适配器 -->
+    <int:logging-channel-adapter id="logLateArrivers"/>
+
+    <!-- Subscribers -->
+    <!-- 输入网关，requestTopic的消息，发送到upcase -->
+    <int-jms:inbound-gateway request-channel="upcase" request-destination="requestTopic"/>
+    <int-jms:inbound-gateway request-channel="upcase" request-destination="requestTopic"/>
+
+    <!-- 消息转换，大写 -->
+    <int:transformer input-channel="upcase" expression="payload.toUpperCase()"/>
+
+    <!-- Profiles -->
+    <beans profile="default">
+        <!-- 控制台输出，out -->
+        <int-stream:stdout-channel-adapter id="out" append-newline="true"/>
+    </beans>
+
+    <beans profile="testCase">
+
+        <!-- 通道桥，将out消息发送到queueChannel -->
+        <int:bridge input-channel="out" output-channel="queueChannel" />
+
+        <!-- queueChannel通道 -->
+        <int:channel id="queueChannel">
+            <int:queue />
+        </int:channel>
+    </beans>
+</beans>

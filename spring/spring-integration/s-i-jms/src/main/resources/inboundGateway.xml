@@ -17,8 +17,8 @@
 
     <context:component-scan base-package="com.xiaopan"/>
 
-    <!-- JMS输入网关，监听requestQueue队列，如果有消息，发送到demoChannel通道 -->
-    <jms:inbound-gateway id="jmsIn" request-destination="requestQueue" request-channel="demoChannel"/>
+    <!-- JMS输入网关，requestQueue队列连接demoChannel通道 -->
+    <jms:inbound-gateway id="jmsin" request-destination="requestQueue" request-channel="demoChannel"/>
 
     <!-- demoChannel通道 -->
     <channel id="demoChannel"/>

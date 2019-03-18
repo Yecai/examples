@@ -9,7 +9,7 @@ public class DemoBean {
 
     @ServiceActivator
     public String upperCase(String input) {
-        return "JMS response:" + input.toUpperCase();
+        return "JMS response: " + input.toUpperCase();
     }
 
 }

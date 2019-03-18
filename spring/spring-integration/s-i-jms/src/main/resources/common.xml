@@ -29,8 +29,8 @@
     </bean>
 
     <!-- 创建ActiveMQ回复队列对象replayQueue，队列名称为queue.replay -->
-    <bean id="replayQueue" class="org.apache.activemq.command.ActiveMQQueue">
-        <constructor-arg value="queue.replay"/>
+    <bean id="replyQueue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="queue.reply"/>
     </bean>
 
     <!-- 轮询器 -->

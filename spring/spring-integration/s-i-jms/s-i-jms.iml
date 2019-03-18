@@ -3,17 +3,18 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Common" removed="false">
+        <fileset id="fileset" name="common" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/outboundGateway.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/common.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/inboundChannelAdapter.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/inboundGateway.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/outboundChannelAdapter.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/outboundGateway.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/aggregation.xml</file>
         </fileset>
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">

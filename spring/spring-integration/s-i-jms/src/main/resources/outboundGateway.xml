@@ -21,19 +21,28 @@
     <!-- 通道 -->
     <channel id="stdinToJmsOutChannel"/>
 
-    <!-- 通道网关，将stdinToJmsOutChannel的消息转发到request -->
+    <!--
+        通道网关
+        1、将stdinToJmsOutChannel的消息转发到requestQueue
+        2、requestQueue在inboundGateway中配置，消息被发送到demoChannel通道并被demoBean处理，并返回大写字母
+        3、返回的数据返回到demoChannel，返回到requestQueue，然后被发送到jmsReplyChannel通道
+        4、
+     -->
     <jms:outbound-gateway request-channel="stdinToJmsOutChannel"
                           request-destination="requestQueue"
                           reply-channel="jmsReplyChannel"/>
 
+    <!-- 通道 -->
     <channel id="jmsReplyChannel"/>
 
     <beans:beans profile="default">
+        <!-- 输出适配器，将jmsReplyChannel通道内容输出到控制台，并换行 -->
         <stream:stdout-channel-adapter channel="jmsReplyChannel" append-newline="true"/>
     </beans:beans>
 
     <beans:beans profile="testCase">
 
+        <!-- 通道桥，jmsReplyChannel通道的消息发送到queueChannel -->
         <bridge input-channel="jmsReplyChannel" output-channel="queueChannel" />
 
         <channel id="queueChannel">
